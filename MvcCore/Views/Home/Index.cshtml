@@ -18,7 +18,21 @@
                 @i
                 <br />
             }
-    </div>
+       </div>
+       <br />
+       <br />
+       <div style="background-color:#4cff00">
+        @{
+            var liste = new List<string>() { "Ankara", "Bursa", "Adana", "İzmir" };
+            var count=1;
+        }
+        @foreach(var li in liste)
+        {
+            @(count.ToString() + '-'+li)
+            count++;
+            <br/>
+        }
+       </div>
     </body>
 </html>
 
