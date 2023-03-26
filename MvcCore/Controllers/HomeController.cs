@@ -17,16 +17,17 @@ namespace MvcCore.Controllers
         {
             return View();
         }
-
-        public IActionResult Privacy()
+        public IActionResult Index2()
         {
             return View();
         }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public int Index3()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return 24;
+        }
+        public string Index4()
+        {
+            return "Merhaba bugün hava çok soğuk";
         }
     }
 }
