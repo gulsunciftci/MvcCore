@@ -29,5 +29,21 @@ namespace MvcCore.Controllers
         {
             return "Merhaba bugün hava çok soğuk";
         }
+        public IActionResult Index5 ()
+        {
+            var Kitaplar = new List<Kitap>()
+            {
+                new Kitap(){ID=1,KitapAd="80 Günde Devri Alem",Yazar="Jules Verne"},
+                new Kitap(){ID=2,KitapAd="Bilinmeyen bir Kadının Mektubu",Yazar="Zweig"},
+                 new Kitap(){ID=3,KitapAd="Bir Noel Hikayesi",Yazar="Charles Dickes"}
+            };
+            return View(Kitaplar);
+        }
+        public IActionResult Index6()
+        {
+            ViewBag.deger1="Merhaba Core Dersleri Devam Ediyor";
+
+            return View();
+        }
     }
 }
