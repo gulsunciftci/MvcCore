@@ -10,12 +10,13 @@
     <head>
         <meta name="viewport" content="width=device-width" />
         <title>Index5</title>
+        <link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet"/>
     </head>
     <body>
        <h2>Merhaba Kitap Sayfamıza Hoşgeldiniz</h2>
        <br />
        <br />
-       <table>
+       <table class="table table-bordered">
        @foreach (var k in Model)
        {
            <tr>
@@ -26,6 +27,6 @@
            </tr>
        }
        </table>
-   
+       <button class="btn btn-warning">Tablo Listesi</button>
    </body>
 </html>

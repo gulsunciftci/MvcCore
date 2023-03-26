@@ -239,3 +239,4 @@ C:\Users\Hp\source\repos\MvcCore\MvcCore\bin\Debug\net6.0\runtimes\win\lib\net6.
 C:\Users\Hp\source\repos\MvcCore\MvcCore\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\Hp\source\repos\MvcCore\MvcCore\obj\Debug\net6.0\MvcCore.csproj.CopyComplete
 C:\Users\Hp\source\repos\MvcCore\MvcCore\bin\Debug\net6.0\bundleconfig.json
+C:\Users\Hp\source\repos\MvcCore\MvcCore\bin\Debug\net6.0\libman.json
