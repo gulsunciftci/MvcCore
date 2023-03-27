@@ -1,0 +1,13 @@
+C:\Users\Hp\source\repos\MvcCore\CoreBooksLibrary\bin\Debug\netcoreapp2.0\CoreBooksLibrary.deps.json
+C:\Users\Hp\source\repos\MvcCore\CoreBooksLibrary\bin\Debug\netcoreapp2.0\CoreBooksLibrary.runtimeconfig.json
+C:\Users\Hp\source\repos\MvcCore\CoreBooksLibrary\bin\Debug\netcoreapp2.0\CoreBooksLibrary.runtimeconfig.dev.json
+C:\Users\Hp\source\repos\MvcCore\CoreBooksLibrary\bin\Debug\netcoreapp2.0\CoreBooksLibrary.dll
+C:\Users\Hp\source\repos\MvcCore\CoreBooksLibrary\bin\Debug\netcoreapp2.0\CoreBooksLibrary.pdb
+C:\Users\Hp\source\repos\MvcCore\CoreBooksLibrary\obj\Debug\netcoreapp2.0\CoreBooksLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Hp\source\repos\MvcCore\CoreBooksLibrary\obj\Debug\netcoreapp2.0\CoreBooksLibrary.AssemblyInfoInputs.cache
+C:\Users\Hp\source\repos\MvcCore\CoreBooksLibrary\obj\Debug\netcoreapp2.0\CoreBooksLibrary.AssemblyInfo.cs
+C:\Users\Hp\source\repos\MvcCore\CoreBooksLibrary\obj\Debug\netcoreapp2.0\CoreBooksLibrary.dll
+C:\Users\Hp\source\repos\MvcCore\CoreBooksLibrary\obj\Debug\netcoreapp2.0\CoreBooksLibrary.pdb
+C:\Users\Hp\source\repos\MvcCore\CoreBooksLibrary\obj\Debug\netcoreapp2.0\CoreBooksLibrary.csproj.AssemblyReference.cache
+C:\Users\Hp\source\repos\MvcCore\CoreBooksLibrary\obj\Debug\netcoreapp2.0\CoreBooksLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hp\source\repos\MvcCore\CoreBooksLibrary\obj\Debug\netcoreapp2.0\CoreBooksLibrary.genruntimeconfig.cache
