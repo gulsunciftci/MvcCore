@@ -1,7 +1,21 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<CoreBooksLibrary.Models.Kitaplar>
+
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>Index</h2>
+<link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+<table class="table table-bordered">
+    <tr>
+       <th>ID</th>
+       <th>KİTAP AD</th>
+       <th>YAZAR</th>
+    </tr>
+    @foreach(var k in Model)
+    {
+    <tr>
+       <td>@k.ID</td>
+       <td>@k.KitapAd</td>
+       <td>@k.Yazar</td>
+    </tr>
+    }
+</table>

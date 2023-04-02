@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CoreBooksLibrary.Models;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace CoreBooksLibrary.Controllers
 {
@@ -6,7 +8,13 @@ namespace CoreBooksLibrary.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var ktp = new List<Kitaplar>()
+            {
+                new Kitaplar(){ID=1,KitapAd="Satranç",Yazar="Zweig"},
+                new Kitaplar(){ID=2,KitapAd="Dr Ox'un Deneyi",Yazar="Jules Verne"},
+                new Kitaplar(){ID=3,KitapAd="Delifişek",Yazar="Vasconceulos"}
+            };
+            return View(ktp);
         }
     }
 }
