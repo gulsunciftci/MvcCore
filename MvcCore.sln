@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.33403.129
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcCore", "MvcCore\MvcCore.csproj", "{5135B0F9-8613-4CAD-8566-49F4F9222ED0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBooksLibrary", "CoreBooksLibrary\CoreBooksLibrary.csproj", "{FB6A7349-2723-4C34-B883-1EA952BC57F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreBooksLibrary", "CoreBooksLibrary\CoreBooksLibrary.csproj", "{FB6A7349-2723-4C34-B883-1EA952BC57F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

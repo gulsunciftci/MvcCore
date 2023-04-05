@@ -8,7 +8,7 @@ C:\Users\Hp\source\repos\MvcCore\CoreBooksLibrary\obj\Debug\netcoreapp2.0\CoreBo
 C:\Users\Hp\source\repos\MvcCore\CoreBooksLibrary\obj\Debug\netcoreapp2.0\CoreBooksLibrary.AssemblyInfo.cs
 C:\Users\Hp\source\repos\MvcCore\CoreBooksLibrary\obj\Debug\netcoreapp2.0\CoreBooksLibrary.dll
 C:\Users\Hp\source\repos\MvcCore\CoreBooksLibrary\obj\Debug\netcoreapp2.0\CoreBooksLibrary.pdb
+C:\Users\Hp\source\repos\MvcCore\CoreBooksLibrary\bin\Debug\netcoreapp2.0\libman.json
 C:\Users\Hp\source\repos\MvcCore\CoreBooksLibrary\obj\Debug\netcoreapp2.0\CoreBooksLibrary.csproj.AssemblyReference.cache
 C:\Users\Hp\source\repos\MvcCore\CoreBooksLibrary\obj\Debug\netcoreapp2.0\CoreBooksLibrary.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Hp\source\repos\MvcCore\CoreBooksLibrary\obj\Debug\netcoreapp2.0\CoreBooksLibrary.genruntimeconfig.cache
-C:\Users\Hp\source\repos\MvcCore\CoreBooksLibrary\bin\Debug\netcoreapp2.0\libman.json
