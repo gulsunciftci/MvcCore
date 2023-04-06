@@ -16,5 +16,9 @@ namespace CoreBooksLibrary.Controllers
             };
             return View(ktp);
         }
+        public IActionResult Deneme()
+        {
+            return View();
+        }
     }
 }
