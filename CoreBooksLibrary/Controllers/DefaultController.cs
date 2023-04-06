@@ -20,5 +20,9 @@ namespace CoreBooksLibrary.Controllers
         {
             return View();
         }
+        public IActionResult StatikTema()
+        {
+            return View();
+        }
     }
 }
