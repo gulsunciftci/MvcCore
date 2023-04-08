@@ -1,6 +1,7 @@
 ﻿@using CoreDepartment.Models
 @model List<departments>
 @{
+     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <br />
@@ -23,3 +24,4 @@
     </tr>
     }
 </table>
+<a href="/departmanlar/YeniDepartman/" class="btn btn-primary">Yeni Departman</a>

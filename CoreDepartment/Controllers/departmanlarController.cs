@@ -10,5 +10,15 @@ namespace CoreDepartment.Controllers
             var degerler = c.Departmanlars.ToList();
             return View(degerler);
         }
+        [HttpGet]
+        public IActionResult YeniDepartman()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult YeniDepartman(departments d)
+        {
+            return View();
+        }
     }
 }
