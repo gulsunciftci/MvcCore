@@ -1,7 +1,25 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@using CoreDepartment.Models
+@model List<departments>
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>Index</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Departman</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Detaylar</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+    <tr>
+        <td>@x.Id</td>
+        <td>@x.departmanAd</td>
+        <td><a href="#" class="btn btn-danger">Sil</a></td>
+        <td><a href="#" class="btn btn-success">Güncelle</a></td>
+        <td><a href="#" class="btn btn-default" style="background-color:#dee61d">Detaylar</a></td>
+    </tr>
+    }
+</table>
