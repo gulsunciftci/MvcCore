@@ -18,7 +18,9 @@ namespace CoreDepartment.Controllers
         [HttpPost]
         public IActionResult YeniDepartman(departments d)
         {
-            return View();
+            c.Departmanlars.Add(d);
+            c.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
