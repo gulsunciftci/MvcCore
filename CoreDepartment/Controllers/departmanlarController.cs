@@ -22,5 +22,12 @@ namespace CoreDepartment.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
+        public IActionResult DepartmanSil(int id)
+        {
+            var dep = c.Departmanlars.Find(id);
+            c.Departmanlars.Remove(dep);
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
