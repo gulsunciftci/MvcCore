@@ -29,5 +29,10 @@ namespace CoreDepartment.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
+        public IActionResult DepartmanGetir(int id)
+        {
+            var depart = c.Departmanlars.Find(id);
+            return View("DepartmanGetir",depart);
+        }
     }
 }
