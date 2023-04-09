@@ -34,5 +34,12 @@ namespace CoreDepartment.Controllers
             var depart = c.Departmanlars.Find(id);
             return View("DepartmanGetir",depart);
         }
+        public IActionResult DepartmanGüncelle(departments d)
+        {
+            var dep = c.Departmanlars.Find(d.Id);
+            dep.departmanAd = d.departmanAd;
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
