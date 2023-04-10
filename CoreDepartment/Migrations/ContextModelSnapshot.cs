@@ -35,7 +35,7 @@ namespace CoreDepartment.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Departmanlars");
+                    b.ToTable("departments");
                 });
 
             modelBuilder.Entity("CoreDepartment.Models.personel", b =>
@@ -50,6 +50,9 @@ namespace CoreDepartment.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("departId")
+                        .HasColumnType("int");
+
                     b.Property<string>("sehir")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -60,7 +63,25 @@ namespace CoreDepartment.Migrations
 
                     b.HasKey("perid");
 
-                    b.ToTable("Dersonels");
+                    b.HasIndex("departId");
+
+                    b.ToTable("personel");
+                });
+
+            modelBuilder.Entity("CoreDepartment.Models.personel", b =>
+                {
+                    b.HasOne("CoreDepartment.Models.departments", "depart")
+                        .WithMany("personels")
+                        .HasForeignKey("departId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("depart");
+                });
+
+            modelBuilder.Entity("CoreDepartment.Models.departments", b =>
+                {
+                    b.Navigation("personels");
                 });
 #pragma warning restore 612, 618
         }

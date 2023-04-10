@@ -11,7 +11,7 @@ namespace CoreDepartment.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Departmanlars",
+                name: "departments",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -20,11 +20,11 @@ namespace CoreDepartment.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Departmanlars", x => x.Id);
+                    table.PrimaryKey("PK_departments", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Dersonels",
+                name: "personel",
                 columns: table => new
                 {
                     perid = table.Column<int>(type: "int", nullable: false)
@@ -35,7 +35,7 @@ namespace CoreDepartment.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Dersonels", x => x.perid);
+                    table.PrimaryKey("PK_personel", x => x.perid);
                 });
         }
 
@@ -43,10 +43,10 @@ namespace CoreDepartment.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Departmanlars");
+                name: "departments");
 
             migrationBuilder.DropTable(
-                name: "Dersonels");
+                name: "personel");
         }
     }
 }

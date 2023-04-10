@@ -8,7 +8,7 @@ namespace CoreDepartment.Models
         {
             optionsBuilder.UseSqlServer("server=(localdb)\\ProjectModels;database=corepersonel;integrated security=true;");
         } 
-        public DbSet<departments> Departmanlars { get; set; }
-        public DbSet<personel>   Dersonels{ get; set; }
+        public DbSet<departments> departments { get; set; }
+        public DbSet<personel>   personel{ get; set; }
     }
 }

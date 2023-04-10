@@ -7,7 +7,7 @@ namespace CoreDepartment.Controllers
         Context c = new Context();
         public IActionResult Index()
         {
-            var degerler = c.Departmanlars.ToList();
+            var degerler = c.departments.ToList();
             return View(degerler);
         }
         [HttpGet]
@@ -18,25 +18,25 @@ namespace CoreDepartment.Controllers
         [HttpPost]
         public IActionResult YeniDepartman(departments d)
         {
-            c.Departmanlars.Add(d);
+            c.departments.Add(d);
             c.SaveChanges();
             return RedirectToAction("Index");
         }
         public IActionResult DepartmanSil(int id)
         {
-            var dep = c.Departmanlars.Find(id);
-            c.Departmanlars.Remove(dep);
+            var dep = c.departments.Find(id);
+            c.departments.Remove(dep);
             c.SaveChanges();
             return RedirectToAction("Index");
         }
         public IActionResult DepartmanGetir(int id)
         {
-            var depart = c.Departmanlars.Find(id);
+            var depart = c.departments.Find(id);
             return View("DepartmanGetir",depart);
         }
         public IActionResult DepartmanGüncelle(departments d)
         {
-            var dep = c.Departmanlars.Find(d.Id);
+            var dep = c.departments.Find(d.Id);
             dep.departmanAd = d.departmanAd;
             c.SaveChanges();
             return RedirectToAction("Index");
