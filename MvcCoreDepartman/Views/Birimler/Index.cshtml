@@ -1,0 +1,28 @@
+﻿@using MvcCoreDepartman
+@model List<Birim>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Birim</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Detaylar</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+    <tr>
+        <td>@x.BirimID</td>
+        <td>@x.BirimAd</td>
+        <td><a href="/Birimler/BirimSil/@x.BirimID" class="btn btn-danger">Sil</a></td>
+        <td><a href="/Birimler/BirimGetir/@x.BirimID" class="btn btn-success">Güncelle</a></td>
+        <td><a href="#" class="btn btn-default" style="background-color:#dee61d">Detaylar</a></td>
+    </tr>
+    }
+</table>
+<a href="/Birimler/YeniBirim/" class="btn btn-primary">Yeni Birim</a>
+
