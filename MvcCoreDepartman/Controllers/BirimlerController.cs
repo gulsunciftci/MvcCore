@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MvcCoreDepartman.Models;
 
 namespace MvcCoreDepartman.Controllers
@@ -6,6 +7,7 @@ namespace MvcCoreDepartman.Controllers
     public class BirimlerController : Controller
     {
         Context c = new Context();
+        [Authorize]
         public IActionResult Index()
         {
             var degerler = c.Birims.ToList();

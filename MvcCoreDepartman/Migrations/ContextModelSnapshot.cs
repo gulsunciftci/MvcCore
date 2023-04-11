@@ -21,6 +21,27 @@ namespace MvcCoreDepartman.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("MvcCoreDepartman.Models.Admin", b =>
+                {
+                    b.Property<int>("AdminID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AdminID"));
+
+                    b.Property<string>("Kullanici")
+                        .IsRequired()
+                        .HasColumnType("Varchar(20)");
+
+                    b.Property<string>("Sifre")
+                        .IsRequired()
+                        .HasColumnType("Varchar(10)");
+
+                    b.HasKey("AdminID");
+
+                    b.ToTable("Admins");
+                });
+
             modelBuilder.Entity("MvcCoreDepartman.Models.Birim", b =>
                 {
                     b.Property<int>("BirimID")

@@ -1,15 +1,33 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Mvc;
+using MvcCoreDepartman.Models;
+using System.Security.Claims;
 
 namespace MvcCoreDepartman.Controllers
 {
     public class LoginController : Controller
     {
-        public IActionResult Index()
+        Context c = new Context();
+        [HttpGet]
+        public IActionResult GirisYap()
         {
             return View();
         }
-        public IActionResult GirisYap()
+        public async Task<IActionResult> GirisYap(Admin p)
         {
+            var bilgiler = c.Admins.FirstOrDefault(x=>x.Kullanici==p.Kullanici &&
+            x.Sifre==p.Sifre);
+            if (bilgiler != null)
+            {
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name,p.Kullanici)
+                };
+                var useridentity = new ClaimsIdentity(claims,"Login");
+                ClaimsPrincipal principal = new ClaimsPrincipal(useridentity);
+                await HttpContext.SignInAsync(principal);
+                return RedirectToAction("Index", "Personeller");
+            }
             return View();
         }
     }
