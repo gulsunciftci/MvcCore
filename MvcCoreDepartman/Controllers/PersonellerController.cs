@@ -16,6 +16,7 @@ namespace MvcCoreDepartman.Controllers
             return View(degerler);
         }
         [HttpGet]
+        [Authorize]
         public IActionResult YeniPersonel()
         {
             List<SelectListItem> degerler = (from x in c.Birims.ToList()
@@ -30,6 +31,7 @@ namespace MvcCoreDepartman.Controllers
             return View();
         }
         [HttpPost]
+        [Authorize]
         public IActionResult YeniPersonel(Personel p)
         {
             var per = c.Birims.Where(x => x.BirimID == p.Birim.BirimID).FirstOrDefault();

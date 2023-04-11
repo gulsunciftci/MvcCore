@@ -14,17 +14,20 @@ namespace MvcCoreDepartman.Controllers
             return View(degerler);
         }
         [HttpGet]
+        [Authorize]
         public IActionResult YeniBirim()
         {
             return View();
         }
         [HttpPost]
+        [Authorize]
         public IActionResult YeniBirim(Birim d)
         {
             c.Birims.Add(d);
             c.SaveChanges();
             return RedirectToAction("Index");
         }
+
         public IActionResult BirimSil(int id)
         {
             var dep = c.Birims.Find(id);
