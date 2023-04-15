@@ -29,9 +29,9 @@ namespace CoreFood.Repositories
             c.Set<T>().Update(p);
             c.SaveChanges();
         }
-        public void TGet(int id)
+        public T TGet(int id)
         {
-            c.Set<T>().Find(id);
+            return c.Set<T>().Find(id);
         }
         public List<T> TList(string s)
         {

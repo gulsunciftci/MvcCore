@@ -25,6 +25,37 @@ namespace CoreFood.Controllers
             }
             categoryRepository.TAdd(p);
             return RedirectToAction("Index");
+            
+        }
+        public IActionResult CategoryGet(int id)
+        {
+            var x = categoryRepository.TGet(id);
+            Category ct = new Category()
+            {
+                CategoryID=x.CategoryID,
+                CategoryName=x.CategoryName,
+                CategoryDescription=x.CategoryDescription
+            };
+
+            return View(ct);
+        }
+        [HttpPost]
+        public IActionResult CategoryUpdate(Category p)
+        {
+            var x = categoryRepository.TGet(p.CategoryID);
+            x.CategoryName = p.CategoryName;
+            x.CategoryDescription = p.CategoryDescription;
+            x.Status = true;
+            categoryRepository.TUpdate(x);
+            return RedirectToAction("Index");
+        }
+        public IActionResult CategoryDelete(int id)
+        {
+            var x = categoryRepository.TGet(id);
+            x.Status = false;
+            categoryRepository.TUpdate(x);
+
+            return RedirectToAction("Index");
         }
     }
 }
