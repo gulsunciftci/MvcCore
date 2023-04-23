@@ -1,15 +1,17 @@
 ﻿using CoreFood.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using CoreFood.Models;
+using X.PagedList;
+
 namespace CoreFood.Controllers
 {
     public class CategoryController : Controller
     {
         CategoryRepository categoryRepository = new CategoryRepository();
-        public IActionResult Index()
+        public IActionResult Index(int page=1)
         {
 
-            return View(categoryRepository.TList());
+            return View(categoryRepository.TList().ToPagedList(page, 3));
         }
         [HttpGet]
         public IActionResult CategoryAdd()
