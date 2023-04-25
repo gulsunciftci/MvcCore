@@ -6,6 +6,7 @@ using X.PagedList;
 
 namespace CoreFood.Controllers
 {
+    
     public class FoodController : Controller
     {
         FoodRepository foodRepository = new FoodRepository();

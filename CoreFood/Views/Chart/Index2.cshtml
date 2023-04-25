@@ -16,7 +16,7 @@
                 type: "POST",
                 dataType: "json",
                 contentType: "application/json",
-                url: '@Url.Action("VisualizeProductResult", "Chart")',
+                url: '@Url.Action("VisualizeProductResult2", "Chart")',
                 success: function (result) {
                     google.charts.load('current', {
                         'packages': ['corechart']
@@ -31,16 +31,16 @@
         function drawChart(result) {
             var data = new google.visualization.DataTable();
             data.addColumn('string', 'Name');
-            data.addColumn('number', 'Stoklar');
+            data.addColumn('number', 'Stock');
             var dataArray = [];
 
             $.each(result, function (i, obj) {
-                dataArray.push([obj.proname, obj.stock]);
+                dataArray.push([obj.foodname, obj.stock]);
             });
             data.addRows(dataArray);
 
             var columnChartOptions = {
-                title: "Ürün - Stok Grafiği",
+                title: "Food - Stock Dynamic Column Chart",
                 width: 1000,
                 height: 400,
                 bar: { groupWidth: "20%" },
