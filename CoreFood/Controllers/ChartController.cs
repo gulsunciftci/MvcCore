@@ -95,6 +95,17 @@ namespace CoreFood.Controllers
             var deger9 = c.Foods.Average(x => x.Price).ToString("0.00");
             ViewBag.d9 = deger9;
 
+            var deger10 = c.Categories.Where(x => x.CategoryName == "Fruit").Select(y => y.CategoryID).FirstOrDefault();
+            var deger10p = c.Foods.Where(y => y.CategoryID == deger10).Sum(x => x.Stock);
+            ViewBag.d10 = deger10p;
+
+            var deger11 = c.Categories.Where(x => x.CategoryName == "Vegetable").Select(y => y.CategoryID).FirstOrDefault();
+            var deger11p = c.Foods.Where(y => y.CategoryID == deger11).Sum(x => x.Stock);
+            ViewBag.d11 = deger11p;
+
+            var deger12 = c.Foods.OrderByDescending(x => x.Price).Select(x => x.Name).FirstOrDefault();
+            ViewBag.d12 = deger12;
+
             return View();
         }
     }
