@@ -2,12 +2,15 @@
 using Microsoft.AspNetCore.Mvc;
 using CoreFood.Models;
 using X.PagedList;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CoreFood.Controllers
 {
     public class CategoryController : Controller
     {
         CategoryRepository categoryRepository = new CategoryRepository();
+
+        
         public IActionResult Index(int page=1)
         {
 
@@ -29,6 +32,7 @@ namespace CoreFood.Controllers
             return RedirectToAction("Index");
             
         }
+     
         public IActionResult CategoryGet(int id)
         {
             var x = categoryRepository.TGet(id);
@@ -42,6 +46,7 @@ namespace CoreFood.Controllers
             return View(ct);
         }
         [HttpPost]
+        
         public IActionResult CategoryUpdate(Category p)
         {
             var x = categoryRepository.TGet(p.CategoryID);
@@ -51,6 +56,7 @@ namespace CoreFood.Controllers
             categoryRepository.TUpdate(x);
             return RedirectToAction("Index");
         }
+        
         public IActionResult CategoryDelete(int id)
         {
             var x = categoryRepository.TGet(id);

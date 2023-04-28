@@ -1,4 +1,5 @@
 ﻿using CoreFood.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoreFood.Controllers
@@ -6,10 +7,12 @@ namespace CoreFood.Controllers
     public class ChartController : Controller
     {
         Context c = new Context();
+        
         public IActionResult Index()
         {
             return View();
         }
+        
         public IActionResult Index2()
         {
             return View();
@@ -42,6 +45,7 @@ namespace CoreFood.Controllers
 
             return charts;
         }
+        
         public IActionResult Index3()
         {
             return View();
@@ -66,6 +70,7 @@ namespace CoreFood.Controllers
             return cs2;
 
         }
+        
         public IActionResult Statistics()
         {
             var deger1 = c.Foods.Count();

@@ -1,5 +1,6 @@
 ﻿using CoreFood.Models;
 using CoreFood.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using X.PagedList;
@@ -11,11 +12,14 @@ namespace CoreFood.Controllers
     {
         FoodRepository foodRepository = new FoodRepository();
         Context c = new Context();
+        
+        
         public IActionResult Index(int page=1)
         {
             return View(foodRepository.TList("Category").ToPagedList(page,3));
         }
         [HttpGet]
+        
         public IActionResult AddFood()
         {
             List<SelectListItem> values = (from x in c.Categories.ToList()
@@ -29,18 +33,21 @@ namespace CoreFood.Controllers
             return View();
         }
         [HttpPost]
+        
         public IActionResult AddFood(Food p )
         {
 
             foodRepository.TAdd(p);
             return RedirectToAction("Index");
         }
+        
         public IActionResult DeleteFood(int id)
         {
            
             foodRepository.TDelete(new Food { FoodID=id});
             return RedirectToAction("Index");
         }
+        
         public IActionResult GetFood(int id)
         {
             List<SelectListItem> values = (from y in c.Categories.ToList()
@@ -67,6 +74,7 @@ namespace CoreFood.Controllers
             return View(f);
         }
         [HttpPost]
+        
         public IActionResult UpdateFood(Food p)
         {
             var x = foodRepository.TGet(p.FoodID);
