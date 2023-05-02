@@ -122,6 +122,20 @@
     <None Include="wwwroot\Login_v6\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
     <None Include="wwwroot\Login_v6\vendor\select2\select2.js" />
     <None Include="wwwroot\Login_v6\vendor\select2\select2.min.js" />
+    <None Include="wwwroot\web\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\web\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="wwwroot\web\js\bootstrap.min.js" />
+    <None Include="wwwroot\web\js\counterup.min.js" />
+    <None Include="wwwroot\web\js\creditly.js" />
+    <None Include="wwwroot\web\js\easing.js" />
+    <None Include="wwwroot\web\js\easyResponsiveTabs.js" />
+    <None Include="wwwroot\web\js\jquery-1.11.1.min.js" />
+    <None Include="wwwroot\web\js\jquery.flexslider.js" />
+    <None Include="wwwroot\web\js\jquery.wmuSlider.js" />
+    <None Include="wwwroot\web\js\minicart.js" />
+    <None Include="wwwroot\web\js\move-top.js" />
+    <None Include="wwwroot\web\js\okzoom.js" />
+    <None Include="wwwroot\web\js\waypoints.min.js" />
   </ItemGroup>
 
   <ItemGroup>
