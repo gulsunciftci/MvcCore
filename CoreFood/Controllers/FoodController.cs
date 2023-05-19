@@ -37,7 +37,6 @@ namespace CoreFood.Controllers
         
         public IActionResult AddFood(Food p )
         {
-
             foodRepository.TAdd(p);
             return RedirectToAction("Index");
         }

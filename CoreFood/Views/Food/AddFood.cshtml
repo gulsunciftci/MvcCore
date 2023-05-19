@@ -5,7 +5,7 @@
 }
 <h1>Food Add Page</h1>
 <br />
-@using(Html.BeginForm("AddFood","Food" , FormMethod.Post))
+@using(Html.BeginForm("AddFood","Food" , FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.Label("Food Name")
     @Html.TextBoxFor(x=>x.Name, new {@class="form-control"})
@@ -16,8 +16,9 @@
     @Html.Label("Stock")
     @Html.TextBoxFor(x=>x.Stock, new {@class="form-control"})
     <br />
-    @Html.Label("Image URL")
+    @Html.Label("Image")
     @Html.TextBoxFor(x=>x.ImageURL, new {@class="form-control"})
+    //<input type="file" name="ImageURL"/>
     <br />
     @Html.Label("Category")
     @Html.DropDownListFor(x=>x.CategoryID,(List<SelectListItem>)ViewBag.v1,new{@class="form-control"})

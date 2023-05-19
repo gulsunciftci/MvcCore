@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RbSAYtvESFrBJsGSBqmA0GeQLjIg/I7E12Ap953y5EE=",
+  "Hash": "RThtQXmXQwxoJyV9IGvkU8h6S3fBXpifdR1mL0k+ufw=",
   "Source": "CoreFood",
   "BasePath": "_content/CoreFood",
   "Mode": "Default",
@@ -6067,6 +6067,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Login_v6\\vendor\\select2\\select2.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\Hp\\source\\repos\\MvcCore\\CoreFood\\wwwroot\\Pictures\\e0a4169a-dff4-4709-9e73-8c942f1ae415.jpg",
+      "SourceId": "CoreFood",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Hp\\source\\repos\\MvcCore\\CoreFood\\wwwroot\\",
+      "BasePath": "_content/CoreFood",
+      "RelativePath": "Pictures/e0a4169a-dff4-4709-9e73-8c942f1ae415.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Pictures\\e0a4169a-dff4-4709-9e73-8c942f1ae415.jpg"
     },
     {
       "Identity": "C:\\Users\\Hp\\source\\repos\\MvcCore\\CoreFood\\wwwroot\\web\\about.html",
