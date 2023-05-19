@@ -16,6 +16,7 @@ namespace CoreFood.Controllers
         
         public IActionResult Index(int page=1)
         {
+            
             return View(foodRepository.TList("Category").ToPagedList(page,3));
         }
         [HttpGet]

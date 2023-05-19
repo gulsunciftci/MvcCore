@@ -11,9 +11,13 @@ namespace CoreFood.Controllers
         CategoryRepository categoryRepository = new CategoryRepository();
 
         
-        public IActionResult Index(int page=1)
+        public IActionResult Index(string p,int page=1)
         {
-
+            if (!string.IsNullOrEmpty(p))
+            {
+                return View(categoryRepository.List(x => x.CategoryName == p).ToPagedList(page, 3));
+            }
+            
             return View(categoryRepository.TList().ToPagedList(page, 3));
         }
         [HttpGet]
