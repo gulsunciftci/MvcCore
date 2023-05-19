@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace CoreFood.Repositories
@@ -36,6 +37,10 @@ namespace CoreFood.Repositories
         public List<T> TList(string s)
         {
             return c.Set<T>().Include(s).ToList();
+        }
+        public List<T> List(Expression<Func<T, bool>> filter)
+        {
+            return c.Set<T>().Where(filter).ToList();
         }
     }
 }
